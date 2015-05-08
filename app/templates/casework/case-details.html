@@ -1,0 +1,42 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+
+Case details
+
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+    <div id="content">
+        <div class="inner-block">
+
+            <h1 class="heading-large">Casework details</h1>
+
+            <table style="width: 50%">
+                {% for item in data.case %}
+                <tr>
+                    <td style="width:30%"><strong>Title number</strong></td>
+                    <td>{{ item.titleNumber }}</td>
+                    </tr>
+                <tr>
+                    <td><strong>Application ref</strong></td>
+                    <td>{{ item.applicationReference }}</td>
+                    </tr>
+                <tr>
+                    <td><strong>Date received</strong></td>
+                    <td>{{ item.dateReceived }}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+
+            <br/>
+            <a href="{{ backpage }}">Return to list</a>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

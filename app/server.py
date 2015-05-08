@@ -37,6 +37,22 @@ def hackday():
 
 # ---------------------------------------------------------------------------
 
+#casework prototype list
+@app.route('/casework/cases')
+def casework_case_list():
+  json_data=open('app/static/data/casework-list.json', "r")
+  data = json.load(json_data)
+  return render_template('casework/case-list.html', data=data)
+
+#casework details page
+@app.route('/casework/cases/<ABR>')
+def casework_case_details(ABR):
+  json_data=open('app/static/data/' + ABR + '.json', "r")
+  data = json.load(json_data)
+  return render_template('casework/case-details.html', data=data, backpage='/casework/cases')
+
+# ---------------------------------------------------------------------------
+
 #hackday 
 @app.route('/hackday/land-ownership-record')
 def hackday_land_record():

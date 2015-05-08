@@ -1,0 +1,24 @@
+{
+  "cases":[
+    {
+      "titleNumber":"DN1",
+      "applicationReference":"LR0001",
+      "dateReceived":"01.05.2015"
+    },
+    {
+      "titleNumber":"KV03",
+      "applicationReference":"LR0002",
+      "dateReceived":"02.05.2015"
+    },
+    {
+      "titleNumber":"DN1",
+      "applicationReference":"LR0003",
+      "dateReceived":"28.02.2015"
+    },
+    {
+      "titleNumber":"ASW01002",
+      "applicationReference":"LR0004",
+      "dateReceived":"04.05.2015"
+    }
+  ]
+}

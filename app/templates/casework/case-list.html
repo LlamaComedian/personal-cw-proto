@@ -1,0 +1,38 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+
+Case list
+
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+    <div id="content">
+        <div class="inner-block">
+
+            <h1 class="heading-large">Casework list</h1>
+
+            <table>
+                <tr>
+                    <thead>
+                    <th>Title number</th>
+                    <th>Application ref</th>
+                    <th>Date received</th>
+                    </thead>
+                </tr>
+                {% for case in data.cases %}
+                    <tr>
+                        <td><a href="/casework/cases/{{ case.applicationReference }}">{{ case.titleNumber }}</a></td>
+                        <td>{{ case.applicationReference }}</td>
+                        <td>{{ case.dateReceived }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
